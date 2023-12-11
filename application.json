@@ -43,5 +43,6 @@
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
   "isManualUpdate": false,
+  "isCommunityTemplate": true,
   "deleted": false
 }

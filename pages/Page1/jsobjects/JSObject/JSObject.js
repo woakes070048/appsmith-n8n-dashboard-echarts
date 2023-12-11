@@ -48,7 +48,13 @@ export default {
 	},	
 
 	async prepare_executions() {
-		await n8n_get_exec.run();
+			try {
+				await n8n_get_exec.run();
+			} catch (e) {
+					showAlert("n8n API failed:\n"+(n8n_get_exec.data.message || e.message),"error");
+				  console.log(e.message);
+			};
+		
 		var all_exec = n8n_get_exec.data.data;
 
 		// if there are more results than for one page
@@ -92,7 +98,13 @@ export default {
 	
 	// Prepare an array of all workflows
 	async prepare_workflows () {
-		await n8n_get_wf.run();
+			try {
+					await n8n_get_wf.run();
+			} catch (e) {
+					showAlert("n8n API failed:\n"+(n8n_get_wf.data.message || e.message),"error");
+				  console.log(e.message);
+			};
+		
 		var all_wf = n8n_get_wf.data.data;
 
 		// if there are more results than for one page
@@ -234,8 +246,15 @@ export default {
 		}
 		
 		console.log(config_);
-		var GPT_autodoc = await Workflow_docs.run(config_);
-		this.workflow_docs = GPT_autodoc.choices[0].message.content;
+		
+			try {
+				var GPT_autodoc = await Workflow_docs.run(config_);
+				this.workflow_docs = GPT_autodoc.choices[0].message.content;
+			} catch (e) {
+					showAlert("GPT failed to run:\n"+Workflow_docs.data.error.message,"error");
+				  console.log(e.message);
+			};		
+		
 		return 1;
 	}, // END OF get_wf_autodoc
 
