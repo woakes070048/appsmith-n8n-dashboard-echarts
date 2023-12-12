@@ -11,7 +11,7 @@
   "clonedFromApplicationId": "6529a7883c26b66c5d6ee48d",
   "unpublishedApplicationDetail": {
     "navigationSetting": {
-      "showNavbar": false,
+      "showNavbar": true,
       "orientation": "top",
       "navStyle": "stacked",
       "position": "static",
