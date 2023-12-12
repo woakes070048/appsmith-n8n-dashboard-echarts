@@ -41,6 +41,11 @@
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
+  "embedSetting": {
+    "height": "720px",
+    "width": "1024px",
+    "showNavigationBar": true
+  },
   "collapseInvisibleWidgets": true,
   "isManualUpdate": false,
   "isCommunityTemplate": true,
