@@ -170,7 +170,7 @@ export default {
 			wf_text += `<b>Total Number of Nodes:</b> ${wf_data.metrics.nodes_all}\n`;
 			wf_text += `<b>Unique Nodes:</b> ${wf_data.metrics.nodes_unique}\n`;
 			wf_text += `<b>Node Types:</b> \n`;
-			wf_text += `${wf_data.metrics.nodes_names.map(item => `<a href="https://n8n.io/integrations/${item}?ref=zjlin2fa&utm_source=affiliate" target="_blank" rel="noopener noreferrer">${item}</a>`).join('\n')}\n`;
+			wf_text += `${wf_data.metrics.nodes_names.map(item => `<a href="https://n8n.io/integrations/${item}" target="_blank" rel="noopener noreferrer">${item}</a>`).join('\n')}\n`;
 		}
 		console.log(wf_data);
 		console.log(wf_text);
