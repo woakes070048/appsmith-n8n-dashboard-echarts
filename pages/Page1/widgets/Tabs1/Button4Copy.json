@@ -1,56 +1,70 @@
 {
-    "resetFormOnClick": false,
-    "boxShadow": "none",
-    "mobileBottomRow": 90,
-    "onClick": "{{await download(JSObject.prepare_download(RichTextEditor1.text),Table2.selectedRow.id+\"-autodoc.html\", \"text/html\");}}",
-    "widgetName": "Button4Copy",
-    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "dynamicPropertyPathList": [{"key": "onClick"}],
-    "iconSVG": "/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
-    "displayName": "Button",
-    "topRow": 39,
-    "searchTags": [
-        "click",
-        "submit"
-    ],
-    "bottomRow": 43,
-    "tooltip": "Make sure to edit the documentation at least in one place before pressing the button",
-    "parentRowSpace": 10,
-    "type": "BUTTON_WIDGET",
-    "hideCard": false,
-    "mobileRightColumn": 23,
-    "animateLoading": true,
-    "parentColumnSpace": 19.8125,
-    "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 35,
-    "dynamicBindingPathList": [
-        {"key": "buttonColor"},
-        {"key": "borderRadius"}
-    ],
-    "text": "Download",
-    "isDisabled": false,
-    "key": "tqvrtyf0gr",
-    "isDeprecated": false,
-    "rightColumn": 46,
-    "isDefaultClickDisabled": true,
-    "iconName": "cloud-download",
-    "widgetId": "f9fbj8itef",
-    "minWidth": 120,
-    "isVisible": true,
-    "version": 1,
-    "recaptchaType": "V3",
-    "parentId": "qyz8fkew7j",
-    "tags": ["Buttons"],
-    "isLoading": false,
-    "renderMode": "CANVAS",
-    "mobileTopRow": 86,
-    "responsiveBehavior": "hug",
-    "originalTopRow": 118,
-    "disabledWhenInvalid": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "mobileLeftColumn": 7,
-    "originalBottomRow": 122,
-    "buttonVariant": "SECONDARY",
-    "iconAlign": "left",
-    "placement": "CENTER"
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 43,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconName": "cloud-download",
+  "iconSVG": "/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "tqvrtyf0gr",
+  "leftColumn": 35,
+  "minWidth": 120,
+  "mobileBottomRow": 90,
+  "mobileLeftColumn": 7,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 86,
+  "onClick": "{{await download(JSObject.prepare_download(RichTextEditor1.text),Table2.selectedRow.id+\"-autodoc.html\", \"text/html\");}}",
+  "originalBottomRow": 122,
+  "originalTopRow": 118,
+  "parentColumnSpace": 19.8125,
+  "parentId": "qyz8fkew7j",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 46,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "text": "Download",
+  "tooltip": "Make sure to edit the documentation at least in one place before pressing the button",
+  "topRow": 39,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "f9fbj8itef",
+  "widgetName": "Button4Copy"
 }

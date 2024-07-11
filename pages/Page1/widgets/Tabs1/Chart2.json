@@ -1,70 +1,96 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "allowScroll": false,
-    "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
-    "topRow": 38,
-    "type": "CHART_WIDGET",
-    "topRowBeforeCollapse": 38,
-    "chartData": {"dk46m8n779": {
-        "data": "[\n  {\n    \"x\": \"Product1\",\n    \"y\": 20000\n  },\n  {\n    \"x\": \"Product2\",\n    \"y\": 22000\n  },\n  {\n    \"x\": \"Product3\",\n    \"y\": 32000\n  }\n]",
-        "seriesName": "2023"
-    }},
-    "animateLoading": true,
-    "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-    "dynamicBindingPathList": [
-        {"key": "customEChartConfig"},
-        {"key": "borderRadius"},
-        {"key": "boxShadow"},
-        {"key": "accentColor"},
-        {"key": "fontFamily"},
-        {"key": "customFusionChartConfig"},
-        {"key": "isVisible"}
-    ],
-    "leftColumn": 0,
-    "onDataPointClick": "{{navigateTo(appsmith.store.n8nurl+\"/workflow/\"+Table1.selectedRow.id+\"/executions/\"+Chart2.selectedDataPoint.rawEventData.data.id, {}, 'NEW_WINDOW');}}",
-    "customEChartConfig": "{{ ((chartType) => ( \nJSObject.create_echart(Table1.selectedRow.id)\n))(Chart2.chartType); }}",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "bottomRowBeforeCollapse": 77,
-    "isVisible": "{{Table1.selectedRow.recent_run|| false }}",
-    "version": 1,
-    "tags": ["Display"],
-    "isLoading": false,
-    "chartName": "Sales Report",
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "xAxisName": "Product Line",
-    "originalBottomRow": 77,
-    "mobileBottomRow": 128,
-    "widgetName": "Chart2",
-    "dynamicPropertyPathList": [
-        {"key": "onDataPointClick"},
-        {"key": "isVisible"}
-    ],
-    "displayName": "Chart",
-    "searchTags": [
-        "graph",
-        "visuals",
-        "visualisations"
-    ],
-    "bottomRow": 77,
-    "parentRowSpace": 10,
-    "hideCard": false,
-    "mobileRightColumn": 24,
-    "parentColumnSpace": 19.8125,
-    "dynamicTriggerPathList": [{"key": "onDataPointClick"}],
-    "customFusionChartConfig": "{\n    \"type\": \"column2d\",\n    \"dataSource\": {\n        \"chart\": {\n            \"caption\": {{Table1.selectedRow.name}},\n            \"yaxisname\": \"Duration (sec)\",\n\t\t\t\t\t\t\"xAxisName\": \"Timestamp\",\n            \"subcaption\": \"(Click to open the execution in a new window)\",\n\t\t\t\t\t\t\n\t\t\t\t\t\t\"labelStep\":{{Math.ceil(_.filter(JSObject.all_executions, function(item) {\n  return item.workflowId === Table1.selectedRow.id;\n}).length/12).toString()}},\n\t\t\t\t\t\t\"labelDisplay\": \"Auto\",\n\t\t\t\t\t\t\"rotateLabels\": \"0\",\n      \"labelDisplay\": \"no\",\n            \"theme\": \"fusion\"\n        },\n        \"data\": {{_.filter(JSObject.all_executions, function(item) {\n  return item.workflowId === Table1.selectedRow.id;\n})}}\n    }\n}",
-    "showDataPointLabel": false,
-    "key": "lpfqg2y5p0",
-    "isDeprecated": false,
-    "rightColumn": 64,
-    "widgetId": "7ti7jmpb00",
-    "minWidth": 450,
-    "parentId": "mo34twwfuq",
-    "labelOrientation": "auto",
-    "renderMode": "CANVAS",
-    "mobileTopRow": 96,
-    "responsiveBehavior": "fill",
-    "yAxisName": "Revenue($)",
-    "originalTopRow": 38,
-    "mobileLeftColumn": 0,
-    "chartType": "CUSTOM_ECHART"
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 77,
+  "bottomRowBeforeCollapse": 77,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "dk46m8n779": {
+      "data": "[\n  {\n    \"x\": \"Product1\",\n    \"y\": 20000\n  },\n  {\n    \"x\": \"Product2\",\n    \"y\": 22000\n  },\n  {\n    \"x\": \"Product3\",\n    \"y\": 32000\n  }\n]",
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \nJSObject.create_echart(Table1.selectedRow.id)\n))(Chart2.chartType) }}",
+  "customFusionChartConfig": "{\n    \"type\": \"column2d\",\n    \"dataSource\": {\n        \"chart\": {\n            \"caption\": {{Table1.selectedRow.name}},\n            \"yaxisname\": \"Duration (sec)\",\n\t\t\t\t\t\t\"xAxisName\": \"Timestamp\",\n            \"subcaption\": \"(Click to open the execution in a new window)\",\n\t\t\t\t\t\t\n\t\t\t\t\t\t\"labelStep\":{{Math.ceil(_.filter(JSObject.all_executions, function(item) {\n  return item.workflowId === Table1.selectedRow.id;\n}).length/12).toString()}},\n\t\t\t\t\t\t\"labelDisplay\": \"Auto\",\n\t\t\t\t\t\t\"rotateLabels\": \"0\",\n      \"labelDisplay\": \"no\",\n            \"theme\": \"fusion\"\n        },\n        \"data\": {{_.filter(JSObject.all_executions, function(item) {\n  return item.workflowId === Table1.selectedRow.id;\n})}}\n    }\n}",
+  "displayName": "Chart",
+  "dynamicBindingPathList": [
+    {
+      "key": "customEChartConfig"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customFusionChartConfig"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onDataPointClick"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": "{{Table1.selectedRow.recent_run|| false }}",
+  "key": "lpfqg2y5p0",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 128,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 96,
+  "onDataPointClick": "{{navigateTo(appsmith.store.n8nurl+\"/workflow/\"+Table1.selectedRow.id+\"/executions/\"+Chart2.selectedDataPoint.rawEventData.data.id, {}, 'NEW_WINDOW');}}",
+  "originalBottomRow": 77,
+  "originalTopRow": 38,
+  "parentColumnSpace": 19.8125,
+  "parentId": "mo34twwfuq",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "graph",
+    "visuals",
+    "visualisations"
+  ],
+  "showDataPointLabel": false,
+  "tags": [
+    "Display"
+  ],
+  "topRow": 38,
+  "topRowBeforeCollapse": 38,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "7ti7jmpb00",
+  "widgetName": "Chart2",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
 }

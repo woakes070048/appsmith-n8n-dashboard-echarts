@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "6529a7883c26b66c5d6ee48d_6529aab73c26b66c5d6ee4ac",
+  "id": "Page1_JSObject",
   "unpublishedCollection": {
     "name": "JSObject",
     "pageId": "Page1",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "workflow_table",
@@ -35,10 +35,6 @@
         "name": "workflow_metrics",
         "value": "\"Select a workflow to get metrics\""
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "Page1_JSObject",
-  "deleted": false,
-  "gitSyncId": "6529a7883c26b66c5d6ee48d_6529aab73c26b66c5d6ee4ac"
+    ]
+  }
 }
